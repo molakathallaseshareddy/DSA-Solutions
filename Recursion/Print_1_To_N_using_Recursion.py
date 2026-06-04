@@ -1,10 +1,10 @@
 class Solution:
     def printNumbers(self, n):
         # Your code goes here
-        if n==1:
-            return print(n)
-        print(n)
+        if n==0:
+            return
         self.printNumbers(n-1)
+        print(n)
 if __name__ == "__main__":
     s = Solution()
-    s.printNumbers(10)
+    s.printNumbers(5)
