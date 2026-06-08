@@ -16,3 +16,4 @@ class Solution:
             result = result * 10 + digit
         
         return sign * result
+        
