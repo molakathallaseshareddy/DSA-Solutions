@@ -9,7 +9,7 @@ class Solution:
             digit = a % 10
             a = a // 10
             
-            # 🔥 Overflow check
+            #Overflow check
             if result > (2**31 - 1) // 10:
                 return 0
             
