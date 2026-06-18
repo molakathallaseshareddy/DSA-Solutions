@@ -7,6 +7,3 @@ class Solution:
             return True
         else:
             return False
-if __name__ == "__main__":
-    s = Solution()
-    print(s.palindromeCheck("ses", 3))
