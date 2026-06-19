@@ -12,12 +12,9 @@ if __name__ == "__main__":
 #Second Solution
 class Solution:
     def reverse(self, arr: list, n: int) -> None:
-        def helper(left, right):
-            if left >= right:
+        def help(i, j):
+            if i > j:
                 return
-
-            arr[left], arr[right] = arr[right], arr[left]
-
-            helper(left + 1, right - 1)
-
-        helper(0, n - 1)
+            arr[i], arr[j] = arr[j], arr[i]
+            help(i+1, j-1)
+        help(0, n-1)
