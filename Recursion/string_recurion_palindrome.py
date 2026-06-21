@@ -19,4 +19,11 @@ class Solution:
                 return s[n-1]
             return s[n-1] + help(n-1)
         a = help(n)
-        return a
+        if s == a:
+            return True
+        else:
+            return False
+if __name__ == "__main__":
+    s = Solution()
+    result = s.palindromeCheck("madam")
+    print(result)
