@@ -22,4 +22,15 @@ if __name__ == "__main__":
     result = s.fib(5)
     print(result)
             
-            
+# recursive solution for fibonacci number
+class Solution:
+    def fib(self, n: int) -> int:
+        if n == 0:
+            return 0
+        if n ==1:
+            return 1
+        def help(i, a, b):
+            if n == i:
+                return b
+            return help(i+1, b, a+b)
+        return help(1,0,1)
