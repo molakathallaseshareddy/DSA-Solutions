@@ -1,3 +1,4 @@
+# First Solution
 # this is not recursive solution, normal solution for fibonacci number
 class Solution:
     def fib(self, n):
@@ -21,7 +22,8 @@ if __name__ == "__main__":
     s = Solution()
     result = s.fib(5)
     print(result)
-            
+
+# Second Solution
 # recursive solution for fibonacci number
 class Solution:
     def fib(self, n: int) -> int:
