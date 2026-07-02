@@ -12,3 +12,14 @@ class Solution:
 if __name__ == "__main__":
     s = Solution()
     print(s.insertionSort([3,2,7,5,1]))
+
+#Insertion Sort second solution
+class Solution:
+    def insertionSort(self, nums):
+        for i in range(1, len(nums)):
+            for j in range(i+1,-1,-1):
+                if nums[i] > nums[j]:
+                    nums[i], nums[j] = nums[j], nums[i]
+        return nums
+s = Solution()
+print(s.insertionSort([3,2,1,4,8,6]))
