@@ -21,5 +21,6 @@ class Solution:
                 if nums[i] > nums[j]:
                     nums[i], nums[j] = nums[j], nums[i]
         return nums
-s = Solution()
-print(s.insertionSort([3,2,1,4,8,6]))
+if __name__ == "__main__":
+    s = Solution()
+    print(s.insertionSort([3,2,1,4,8,6]))
