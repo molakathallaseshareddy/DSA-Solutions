@@ -21,3 +21,7 @@ def student_get(no : int):
 def add_student(student :Student):
     students.append(student)
     return {"Message" : "Student added successfully"}
+
+@app.put("update/{no}")
+def update_student(no : int, student : Student):
+    l = []
