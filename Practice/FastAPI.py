@@ -16,3 +16,22 @@ def student(id :int):
     for i in students:
         if i.rollno == id:
             return i
+
+@app.post("/add_student")
+def add_student(student : Student):
+    students.append(student)
+    return student
+
+@app.put("/update_student/{id}")
+def update_student(id : int, student: Student):
+    for i in range(len(students)):
+        if students[i].rollno == id:
+            students[i] = student
+            return {"message" : "Student is updated"}
+
+@app.delete("/delete_student/{id}")
+def delete_student(id : int):
+    for i in students:
+        if i.rollno == id:
+            students.remove(i)
+            return {"student is deleted"}
