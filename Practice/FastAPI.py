@@ -1,11 +1,17 @@
 from fastapi import FastAPI
 from module import Student
+import database_models
+from database import session, engine
+
+database_models.Base.metadata.create_all(bind = engine)
 
 app = FastAPI()
 
 students = [Student(rollno = 1, stname = "siva", Class = 10, fee = 20000),
            Student(rollno = 2, stname = "raja", Class = 9, fee = 18000),
            Student(rollno = 3, stname = "ramya", Class = 8, fee = 16000)]
+
+
 
 @app.get("/students")
 def students1():
