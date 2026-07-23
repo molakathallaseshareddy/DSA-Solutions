@@ -6,6 +6,6 @@ Base = declarative_base()
 class Product(Base):
     __tablename__ = "product"
     rollno = Column(Integer, primary_key = True)
-    stname = Column(String)
+    stname = Column(String(50))
     Class = Column(Integer)
     fee = Column(Float)
