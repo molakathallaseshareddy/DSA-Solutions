@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from App.models import Cust
 
 # Create your views here.
 def test(req):
