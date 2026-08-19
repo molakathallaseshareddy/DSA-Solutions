@@ -20,3 +20,14 @@ def fullname(req):
     b = req.POST.get('lname')
     c = a +" "+ b
     return render(req, 'fullname.html', {'fln': c})
+
+def register(req):
+    if req.method == 'POST':
+        a = req.POST.get('cid')
+        b = req.POST.get('cname')
+        c = req.POST.get('bno')
+        e1 = Cust(cid = a, cname= b, busno = c)
+        e1.save()
+        return render(req, 'register.html', {"msg":"Data Inserted"})
+    else:
+        return render(req,"register.html")
