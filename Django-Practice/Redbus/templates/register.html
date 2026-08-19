@@ -1,0 +1,11 @@
+<body>
+    <form action = "{% url 'register' %}" method="post">
+        {% csrf_token %}
+        {{msg}}
+    <table>
+        <tr><th>Customer Id</th><th><input type = "number" name = "cid"></th></tr>
+        <tr><th>Customer Name</th><th><input type = "text" name = "cname"></th></tr>
+        <tr><th>Bus Number write</th><th><input type = "number" name = "bno"></th></tr>
+        <tr><th collspan ="2"><input type ="submit" value ="Register" name ="s"></th></tr>
+    </table>
+</body>
